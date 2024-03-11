@@ -6,14 +6,34 @@
 
 // THE REACT WAY, WITH AND WITHOUT JSX
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
-const p1 = React.createElement('p',{},"Hi I'm child 1");
-const p2 = React.createElement('p',{},"Hi I'm child 2");
+// const p1 = React.createElement('p',{},"Hi I'm child 1");
+// const p2 = React.createElement('p',{},"Hi I'm child 2");
 // const div = React.createElement('div',{className: 'colorChange'},[p1,p2]);
-const div = <div className='colorChange'>
-    <p>Hi</p>
-</div>
-console.log(div);
+// const div = <div>
+//     <p>Hi</p>
+// </div>
+// console.log(div);
+
+// A simple time application
+const currentDate = new Date();
+let hours = currentDate.getHours();
+let minutes = currentDate.getMinutes();
+let seconds = currentDate.getSeconds();
+
+const GetGreeting = function()
+{
+    let greeting='';
+    if(hours<12)
+        greeting=<p>Good morning!</p>
+    else
+        greeting=<p>Good evening!</p>
+    return <>
+        {greeting}
+        The time is {hours+':'+minutes+':'+seconds}
+    </>;
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(div);
+root.render(<GetGreeting/>);
