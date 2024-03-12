@@ -1,10 +1,10 @@
-//  THE VANILLA JAVASCRIPT WAY
+//  ----------THE VANILLA JAVASCRIPT WAY----------
 // const root = document.getElementById('root');
 // const header = document.createElement('h1');
 // header.innerText = "Hello from Poorvi";
 // root.appendChild(header);
 
-// THE REACT WAY, WITH AND WITHOUT JSX
+// ---------THE REACT WAY, WITH AND WITHOUT JSX--------
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -16,7 +16,13 @@ import ReactDOM from 'react-dom/client';
 // </div>
 // console.log(div);
 
-// A simple time application
+// ------- CONDITIONAL RENDERING -------
+// const flag=false;
+// const p1 = <p>I'm para 1, when true</p>
+// const p2 = <p>I'm para 2, when false</p>
+// const condiDiv = flag?p1:p2;
+
+// ---------A simple time application--------
 // const currentDate = new Date();
 // let hours = currentDate.getHours();
 // let minutes = currentDate.getMinutes();
@@ -35,6 +41,7 @@ import ReactDOM from 'react-dom/client';
 //     </>;
 // }
 
+// -------EVENTS IN JSX------- 
 const message = 'inside function';
 const handleClick = (message)=>{
     console.log('Printing on click:'+message);
