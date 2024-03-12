@@ -1,3 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>);
+
 //  ----------THE VANILLA JAVASCRIPT WAY----------
 // const root = document.getElementById('root');
 // const header = document.createElement('h1');
@@ -5,8 +12,6 @@
 // root.appendChild(header);
 
 // ---------THE REACT WAY, WITH AND WITHOUT JSX--------
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 // const p1 = React.createElement('p',{},"Hi I'm child 1");
 // const p2 = React.createElement('p',{},"Hi I'm child 2");
@@ -42,12 +47,9 @@ import ReactDOM from 'react-dom/client';
 // }
 
 // -------EVENTS IN JSX------- 
-const message = 'inside function';
-const handleClick = (message)=>{
-    console.log('Printing on click:'+message);
-}
+// const message = 'inside function';
+// const handleClick = (message)=>{
+//     console.log('Printing on click:'+message);
+// }
 
-const div = <div onClick={()=>handleClick(message)}>Hi I am a div</div>
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(div);
+// const div = <div onClick={()=>handleClick(message)}>Hi I am a div</div>
