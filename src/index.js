@@ -2,8 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App/>);
+
+// const msg='HI';
+// const divClick = (msg)=>{
+//     console.log(msg);
+// };
+
+// const divFinal = <div onClick={divClick}>Click me</div> --> Here, we are not calling the function, we are just passing a reference to the divClick function. That is why onClick function works perfectly fine. Because when the div is clicked, the function is invoked.
+
+// const divFinal = <div onClick={divClick(msg)}>Click me</div> --> Here, we are calling the function. Which means that when the page is rendered, the function JS code will be executed and since it returns nothing, onClick will be empty. So, when a click event occurs there is no function that onClick can invoke.
 
 //  ----------THE VANILLA JAVASCRIPT WAY----------
 // const root = document.getElementById('root');
@@ -52,4 +62,4 @@ root.render(<App/>);
 //     console.log('Printing on click:'+message);
 // }
 
-// const div = <div onClick={()=>handleClick(message)}>Hi I am a div</div>
+// const div = <div onClick={()=>handleClick(message)}>Hi I am a div</div>-->Here, we are calling the function. Which means that when the page is rendered, the function JS code will be executed and since it returns nothing, onClick will be empty. So, when a click event occurs there is no function that onClick can invoke.
