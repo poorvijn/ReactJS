@@ -17,23 +17,30 @@ import ReactDOM from 'react-dom/client';
 // console.log(div);
 
 // A simple time application
-const currentDate = new Date();
-let hours = currentDate.getHours();
-let minutes = currentDate.getMinutes();
-let seconds = currentDate.getSeconds();
+// const currentDate = new Date();
+// let hours = currentDate.getHours();
+// let minutes = currentDate.getMinutes();
+// let seconds = currentDate.getSeconds();
 
-const GetGreeting = function()
-{
-    let greeting='';
-    if(hours<12)
-        greeting=<p>Good morning!</p>
-    else
-        greeting=<p>Good evening!</p>
-    return <>
-        {greeting}
-        The time is {hours+':'+minutes+':'+seconds}
-    </>;
+// const GetGreeting = function()
+// {
+//     let greeting='';
+//     if(hours<12)
+//         greeting=<p>Good morning!</p>
+//     else
+//         greeting=<p>Good evening!</p>
+//     return <>
+//         {greeting}
+//         The time is {hours+':'+minutes+':'+seconds}
+//     </>;
+// }
+
+const message = 'inside function';
+const handleClick = (message)=>{
+    console.log('Printing on click:'+message);
 }
 
+const div = <div onClick={()=>handleClick(message)}>Hi I am a div</div>
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<GetGreeting/>);
+root.render(div);
