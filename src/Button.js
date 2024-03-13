@@ -7,7 +7,7 @@ const Button = (props)=>{
         clickAction?.();
     };
     // console.log(props);
-    return <button onClick={handleClick}>{children} {data?.a}</button>;
+    return <button className='styleBtn' onClick={handleClick}>{children} {data?.a}</button>;
 };
 
 export default Button;
