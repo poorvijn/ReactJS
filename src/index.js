@@ -62,4 +62,4 @@ root.render(<App/>);
 //     console.log('Printing on click:'+message);
 // }
 
-// const div = <div onClick={()=>handleClick(message)}>Hi I am a div</div>-->Here, we are calling the function. Which means that when the page is rendered, the function JS code will be executed and since it returns nothing, onClick will be empty. So, when a click event occurs there is no function that onClick can invoke.
+// const div = <div onClick={handleClick(message)}>Hi I am a div</div>-->Here, we are calling the function. Which means that when the page is rendered, the function JS code will be executed and since it returns nothing, onClick will be empty. So, when a click event occurs there is no function that onClick can invoke. Fixed by: onClick = {()=> handleClick(message)} --> returns arrow function that is invoked on click, which in turn invokes handleClick
